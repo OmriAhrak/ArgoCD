@@ -29,5 +29,5 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: OmriAhrak/argocd-cd
-        token: ${{ secrets.REPO_CD_TOKEN}}
+        token: ${{ secrets.REPO_CD_TOKEN}} 
         

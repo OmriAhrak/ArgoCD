@@ -19,6 +19,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    -  name: Build and push
+       uses: docker/build-push-action@v3
+       with:
+         push: true
+         tags: user/app:latest
